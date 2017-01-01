@@ -75,6 +75,7 @@ public class FXMLDocumentController implements Initializable {
         CookieManager cookieManager = new CookieManager();
         CookieHandler.setDefault(cookieManager);
 
+        //  try failed miserably
         /*
         End of trying
          */
