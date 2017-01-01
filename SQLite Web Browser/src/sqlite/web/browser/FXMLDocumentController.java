@@ -263,6 +263,11 @@ public class FXMLDocumentController implements Initializable {
         HBox hBox = (HBox) list.get(0);
         TextField textField = (TextField) hBox.getChildren().get(5);
         String url = textField.getText();
+
+        if (url.startsWith("https://") == false) {
+            url = "https://" + url;
+        }
+
         WebEngine webEngine = webView.getEngine();
         webEngine.load(url);
         borderPane.setCenter(webView);
