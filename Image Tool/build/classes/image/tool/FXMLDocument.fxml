@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="image.tool.FXMLDocumentController">
+  <tabs>
+    <Tab text="Basics">
+      <content>
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="880.0">
+          <children>
+            <VBox prefHeight="532.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <MenuBar>
+                  <menus>
+                    <Menu mnemonicParsing="false" text="File">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleSelectImageAction" text="Select Image..." />
+                        <MenuItem mnemonicParsing="false" onAction="#handleSaveAsAction" text="Save as..." />
+                        <MenuItem mnemonicParsing="false" onAction="#handleCloseAction" text="Close" />
+                      </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Edit">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleRGBToGrayScaleAction" text="RGB to Grayscale" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleFindTAction" text="Find T" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleResetGrayAction" text="Reset" />
+                      </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Help">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleAboutAction" text="About" />
+                      </items>
+                    </Menu>
+                  </menus>
+                </MenuBar>
+                <SplitPane dividerPositions="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="687.0" prefWidth="880.0">
+                  <items>
+                    <ScrollPane>
+                      <content>
+                        <AnchorPane fx:id="leftPane" minHeight="0.0" minWidth="0.0" />
+                      </content>
+                    </ScrollPane>
+                    <ScrollPane>
+                      <content>
+                        <AnchorPane fx:id="rightPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="493.0" prefWidth="370.0" />
+                      </content>
+                    </ScrollPane>
+                  </items>
+                </SplitPane>
+                <Label prefHeight="16.0" prefWidth="959.0" />
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Differ Image">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <VBox prefHeight="687.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <MenuBar>
+                  <menus>
+                    <Menu mnemonicParsing="false" text="File">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleSelectMultipleImageAction" text="Select Image..." />
+                        <MenuItem mnemonicParsing="false" onAction="#handleSaveDifferImageAsAction" text="Save as..." />
+                        <MenuItem mnemonicParsing="false" onAction="#handleCloseAction" text="Close" />
+                      </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Edit">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleDifferAction" text="Differ" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMultipleResetAction" text="Reset" />
+                      </items>
+                    </Menu>
+                    <Menu mnemonicParsing="false" text="Help">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleAboutAction" text="About" />
+                      </items>
+                    </Menu>
+                  </menus>
+                </MenuBar>
+                <SplitPane dividerPositions="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="337.0" prefWidth="880.0">
+                  <items>
+                    <ScrollPane>
+                      <content>
+                        <AnchorPane fx:id="leftPane1" minHeight="0.0" minWidth="0.0" />
+                      </content>
+                    </ScrollPane>
+                    <ScrollPane>
+                      <content>
+                        <AnchorPane fx:id="rightPane1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="493.0" prefWidth="370.0" />
+                      </content>
+                    </ScrollPane>
+                  </items>
+                </SplitPane>
+                <ScrollPane>
+                  <content>
+                    <AnchorPane fx:id="finalPane" prefHeight="309.0" prefWidth="875.0" />
+                  </content>
+                </ScrollPane>
+                <Label prefHeight="16.0" prefWidth="959.0" />
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
