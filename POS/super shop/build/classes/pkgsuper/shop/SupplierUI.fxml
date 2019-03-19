@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="353.0" prefWidth="915.0" stylesheets="@CSS.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgsuper.shop.SupplierUIController">
+   <children>
+      <GridPane layoutX="11.0" layoutY="13.0" prefHeight="200.0" prefWidth="344.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="12.0" minHeight="8.0" prefHeight="8.0" />
+          <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="16.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.0" minHeight="0.0" prefHeight="7.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Product Name:" GridPane.rowIndex="3" />
+            <Label text="Category:" GridPane.rowIndex="4" />
+            <Label text="Unit Price:" GridPane.rowIndex="5" />
+            <TextField fx:id="nameField" prefHeight="33.0" prefWidth="153.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="categoryField" prefHeight="25.0" prefWidth="153.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="unitPriceField" prefHeight="17.0" prefWidth="153.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="totalUnitField" prefHeight="9.0" prefWidth="153.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ToolBar prefHeight="31.0" prefWidth="350.0" GridPane.columnSpan="2" GridPane.rowIndex="8">
+               <items>
+                  <Button fx:id="addToCartField" mnemonicParsing="false" onAction="#handleAddAction" text="ADD TO CART" />
+                  <Button fx:id="finishOrderButton" mnemonicParsing="false" onAction="#handleFinishOrderAction" text="FINISH ORDER" />
+                  <Button mnemonicParsing="false" onAction="#handleSignOutAction" text="Sign out" />
+               </items>
+            </ToolBar>
+            <Label text="Total Units:" GridPane.rowIndex="6" />
+            <Label text="Please click on 'FINISH ORDER' to finalize the order." textFill="#290beb" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <Label text="For the safety:" textFill="#1207dd" />
+         </children>
+      </GridPane>
+      <ListView fx:id="productView" layoutX="358.0" layoutY="16.0" prefHeight="200.0" prefWidth="200.0" />
+      <VBox layoutX="7.0" layoutY="222.0" prefHeight="38.0" prefWidth="551.0">
+         <children>
+            <Label fx:id="warningField" prefHeight="16.0" prefWidth="353.0" text="Warning:" textFill="#101beb" />
+            <Label fx:id="warningField2" prefHeight="16.0" prefWidth="583.0" text=" " textFill="#120cbc" />
+         </children>
+      </VBox>
+      <TableView fx:id="allProductTableView" layoutX="558.0" layoutY="16.0" prefHeight="200.0" prefWidth="337.0">
+        <columns>
+          <TableColumn fx:id="itemColumn" prefWidth="188.0" text="Item" />
+          <TableColumn fx:id="unitsLeftColumn" prefWidth="180.0" text="Units Left" />
+        </columns>
+      </TableView>
+      <Label layoutX="600.0" layoutY="222.0" text="*These are the current stock" textFill="#eb0707" />
+      <Label fx:id="attentionLabel" layoutX="7.0" layoutY="266.0" prefHeight="16.0" prefWidth="551.0" textFill="#dd0707" />
+      <Label fx:id="attentionLabel2" layoutX="8.0" layoutY="292.0" prefHeight="16.0" prefWidth="551.0" textFill="#e10c0c" />
+      <TextField fx:id="orderMoreField" layoutX="688.0" layoutY="279.0" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #9999CC; -fx-border-color: #000000;" />
+      <Button fx:id="orderMoreButton" layoutX="688.0" layoutY="308.0" mnemonicParsing="false" onAction="#handleOrderAction" prefHeight="26.0" prefWidth="84.0" text="ORDER" />
+      <Label layoutX="778.0" layoutY="279.0" prefHeight="26.0" prefWidth="38.0" text="Units." />
+      <Label layoutX="603.0" layoutY="278.0" prefHeight="26.0" prefWidth="84.0" text="Order More:" />
+      <Label layoutX="603.0" layoutY="252.0" text="Select any product to order more units." />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="10.0" right="10.0" top="-100.0" />
+   </padding>
+</AnchorPane>

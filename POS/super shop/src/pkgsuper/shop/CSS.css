@@ -1,0 +1,240 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 12, 2015, 7:46:23 PM
+    Author     : shamin
+*/
+
+.root{
+    -fx-background-color: #303030;
+}
+
+.button{
+    -fx-background-color: #484848;   
+    -fx-text-fill: whitesmoke;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+}
+
+.button:hover {
+    -fx-background-color: #383838;
+    -fx-text-fill: whitesmoke;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.radio-button{
+    -fx-text-fill: silver;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.radio-button:hover {
+    -fx-text-fill: red;
+}
+
+.radio-button:selected {
+    -fx-text-fill: red;
+}
+
+//---------------------------------------------------------------------------------
+
+.menu-bar {
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-background-color: #484848;
+    -fx-cursor: hand;
+}
+
+//---------------------------------------------------------------------------------
+
+.text-field {
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-background-color: #989898;
+}
+
+.tool-bar {
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-background-color: #484848;   
+}
+
+.tool-bar .label{
+    -fx-font-weight: bold;
+    -fx-text-fill: silver;
+}
+
+//
+.text-area {
+    -fx-background-color: #989898;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+//
+.combo-box {
+    -fx-background-radius: 20;
+}
+
+//---------------------------------------------------------------------------------
+
+.label {
+    -fx-font-weight: 600;
+    -fx-text-fill: silver;
+}
+
+.label-clock{
+    -fx-text-fill: deepskyblue;
+}
+
+#bold-label{
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+}
+
+#regular-label{
+    -fx-font-weight: 100;
+}
+
+//---------------------------------------------------------------------------------
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width: 150px;
+
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+    -fx-cursor: hand;
+    -fx-font-family: "Comic Sans MS";
+
+}
+.tab-pane .tab
+{
+    //-fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-background-color: #505050;
+    -fx-text-fill: white;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #181818;
+    -fx-color: -fx-hover-base;
+    -fx-text-fill: white;
+}
+
+.tab-pane .tab:hover
+{
+    -fx-background-color: #303030;
+    -fx-color: -fx-hover-base;
+    -fx-text-fill: white;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+}
+
+//---------------------------------------------------------------------------------
+
+.list-view{
+    -fx-font-family: "Comic Sans MS";
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-text-fill: white;
+}
+
+.list-cell:even { 
+    -fx-background-color: white;
+}
+
+.list-cell:filled {
+    -fx-display: list-item;
+    -fx-list-style: none;
+    -fx-border-color: #472861;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #909090;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-border-color: #472861;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+}
+
+//---------------------------------------------------------------------------------
+
+/*.table-view .column-header .label {
+    -fx-text-fill: #181818;
+    -fx-font-weight: bold;
+}*/
+
+.table-view {
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+    -fx-cursor: hand;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    //-fx-font-size: 20pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}

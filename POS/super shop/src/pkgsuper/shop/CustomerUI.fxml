@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="603.0" stylesheets="@CSS.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgsuper.shop.CustomerUIController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="14.0" prefHeight="356.0" prefWidth="364.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="112.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="259.0" minWidth="10.0" prefWidth="252.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="49.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="155.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="User Name:" GridPane.rowIndex="1" />
+            <Label text="Product:" GridPane.rowIndex="2" />
+            <Label text="Total Units:" GridPane.rowIndex="3" />
+            <TextField fx:id="totalUnitField" onKeyTyped="#handleKeyTypeAction" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Today's Date:" />
+            <ToolBar prefHeight="38.0" prefWidth="141.0" GridPane.columnSpan="2" GridPane.rowIndex="4">
+              <items>
+                <Button fx:id="addToCartButton" mnemonicParsing="false" onAction="#handleAddToCartAction" text="ADD TO CART" />
+                  <Button fx:id="shopNowButton" mnemonicParsing="false" onAction="#handleShopNowAction" text="SHOP NOW" />
+                  <Button mnemonicParsing="false" onAction="#handleGoBackAction" text="GO BACK" />
+              </items>
+            </ToolBar>
+            <TableView fx:id="availableProductTableView" onMouseClicked="#handleMouseClickAction" prefHeight="170.0" prefWidth="269.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <columns>
+                <TableColumn fx:id="nameColumn1" prefWidth="155.0" text="Name" />
+                <TableColumn fx:id="unitPriceColumn1" prefWidth="96.0" text="Unit Price" />
+              </columns>
+            </TableView>
+            <Label fx:id="todayDate" prefHeight="28.0" prefWidth="252.0" GridPane.columnIndex="1" />
+            <Label fx:id="userNameLabel" prefHeight="22.0" prefWidth="252.0" textFill="#0518e4" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <HBox layoutX="387.0" layoutY="68.0" prefHeight="246.0" prefWidth="200.0">
+         <children>
+            <TableView fx:id="cartTableView" prefHeight="246.0" prefWidth="223.0">
+              <columns>
+                <TableColumn fx:id="nameColumn2" prefWidth="118.0" text="Name" />
+                <TableColumn fx:id="unitPriceColumn2" prefWidth="81.0" text="Unit Price" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <Label layoutX="416.0" layoutY="33.0" text="ITEMS IN CART">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="billLabel" layoutX="387.0" layoutY="337.0" prefHeight="16.0" prefWidth="200.0" text="Total Bill:" />
+   </children>
+</AnchorPane>
