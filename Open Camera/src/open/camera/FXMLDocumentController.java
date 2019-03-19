@@ -104,7 +104,6 @@ public class FXMLDocumentController implements Initializable {
                 System.out.println("Current value: " + threshold.getValue() * 10);
             }
         });
-
     }
 
     @FXML
