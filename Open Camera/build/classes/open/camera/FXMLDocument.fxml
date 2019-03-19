@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="649.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="open.camera.FXMLDocumentController">
+   <children>
+      <VBox prefHeight="649.0" prefWidth="619.0">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="619.0">
+               <items>
+                  <Label prefHeight="25.0" prefWidth="264.0" />
+                  <CheckBox fx:id="cannyBox" mnemonicParsing="false" onAction="#handleCannyBoxAction" text="Canny" />
+                  <Slider fx:id="threshold" prefHeight="16.0" prefWidth="176.0" />
+                  <RadioButton fx:id="toggleButton" mnemonicParsing="false" onAction="#handleToggleButtonAction" prefHeight="29.0" prefWidth="81.0" text="Status" />
+               </items>
+            </ToolBar>
+            <ImageView fx:id="imageView" fitHeight="377.0" fitWidth="619.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="tempView" fitHeight="230.0" fitWidth="358.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

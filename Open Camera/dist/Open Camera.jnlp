@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Open Camera.jnlp">
+  <information>
+    <title>Open Camera</title>
+    <vendor>shamin</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-Djava.library.path=/home/shamin/opencv/build/lib "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib/opencv-310.jar" size="312728" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Open Camera" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="open.camera.OpenCamera"  name="Open Camera" />
+  <update check="always"/>
+</jnlp>
