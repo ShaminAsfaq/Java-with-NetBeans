@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="598.0" prefWidth="434.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mysql.to.pkgdo.list.FXMLDocumentController">
+   <children>
+      <TabPane fx:id="tabPane" prefHeight="392.0" prefWidth="434.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="todaysTaskTab" text="What's Today!">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="11.0" layoutY="11.0" prefHeight="244.0" prefWidth="204.0">
+                           <children>
+                              <VBox prefHeight="317.0" prefWidth="199.0">
+                                 <children>
+                                    <ToolBar prefHeight="40.0" prefWidth="200.0">
+                                       <items>
+                                          <Hyperlink onAction="#handleAddTaskLinkAction" styleClass="button-whatsToday" text="Add Task" />
+                                          <Hyperlink onAction="#handleRemoveLink" styleClass="button-whatsToday" text="REMOVE" />
+                                          <Hyperlink onAction="#handleExitLinkAction" styleClass="button-whatsToday" text="Exit" />
+                                       </items>
+                                    </ToolBar>
+                                    <Label fx:id="todaysDateLabel" prefHeight="25.0" prefWidth="199.0" text="Today's date: " textFill="#0c0251">
+                                       <font>
+                                          <Font name="DejaVu Sans Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <ListView fx:id="todaysTaskList" onKeyReleased="#handleTodaysTaskListKeyReleasedAction" onMouseClicked="#handleTodaysTaskListClickAction" prefHeight="170.0" prefWidth="199.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="11.0" layoutY="255.0" prefHeight="271.0" prefWidth="414.0">
+                           <children>
+                              <ListView fx:id="todaysTaskDescription" prefHeight="200.0" prefWidth="414.0" />
+                              <Label prefHeight="16.0" prefWidth="457.0" />
+                              <Label fx:id="timerLabel" disable="true" prefHeight="52.0" prefWidth="413.0" />
+                           </children>
+                        </VBox>
+                        <ImageView disable="true" fitHeight="236.0" fitWidth="191.0" layoutX="229.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="addTaskTab" text="Add Task">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="14.0" layoutY="14.0" prefHeight="543.0" prefWidth="411.0">
+                           <children>
+                              <HBox prefHeight="543.0" prefWidth="212.0">
+                                 <children>
+                                    <VBox prefHeight="543.0" prefWidth="208.0">
+                                       <children>
+                                          <DatePicker fx:id="addTaskDatePicker" onAction="#handleTaskDatePickerAction" prefHeight="26.0" prefWidth="217.0" promptText="Select a date" />
+                                          <Label prefHeight="16.0" prefWidth="315.0" />
+                                          <HBox prefHeight="11.0" prefWidth="192.0">
+                                             <children>
+                                                <CheckBox fx:id="_12Check" mnemonicParsing="false" onAction="#on12HourAction" prefHeight="18.0" prefWidth="97.0" styleClass="label" stylesheets="@StyleSheet.css" text="12-Hour" />
+                                                <Label prefHeight="16.0" prefWidth="10.0" />
+                                                <CheckBox fx:id="_24Check" mnemonicParsing="false" onAction="#on24Hourction" prefHeight="18.0" prefWidth="92.0" styleClass="label" stylesheets="@StyleSheet.css" text="24-Hour" />
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="16.0" prefWidth="235.0" />
+                                          <HBox>
+                                             <children>
+                                                <Label prefHeight="16.0" prefWidth="71.0" text="Hour:" />
+                                                <ComboBox fx:id="hourComboBox" prefWidth="150.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label prefHeight="16.0" prefWidth="71.0" text="Minute:" />
+                                                <ComboBox fx:id="minuteComboBox" prefWidth="150.0" />
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="16.0" prefWidth="282.0" />
+                                          <Label prefHeight="16.0" prefWidth="240.0" text="Where ? (optional)" />
+                                          <TextField fx:id="whereField" promptText="home, office etc." />
+                                          <Label prefHeight="16.0" prefWidth="260.0" />
+                                          <TextField fx:id="headerField" promptText="Header" />
+                                          <Separator prefWidth="200.0" />
+                                          <TextArea fx:id="descriptionArea" prefHeight="200.0" prefWidth="200.0" promptText="Description" />
+                                          <Separator prefWidth="200.0" />
+                                          <HBox prefHeight="15.0" prefWidth="192.0" />
+                                          <Button mnemonicParsing="false" onAction="#handleAddTaskAction" prefHeight="26.0" prefWidth="235.0" stylesheets="@StyleSheet.css" text="Add Task" />
+                                          <ProgressBar fx:id="progressionBar" prefHeight="39.0" prefWidth="213.0" progress="0.0" />
+                                          <Label fx:id="statusLabel" prefHeight="16.0" prefWidth="257.0">
+                                             <textFill>
+                                                <LinearGradient cycleMethod="REPEAT" endY="1.0" proportional="false" startX="0.9903846153846154" startY="0.9807692307692307">
+                                                   <stops>
+                                                      <Stop color="#3f1db9" />
+                                                      <Stop color="#826fc6" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                             <font>
+                                                <Font name="DejaVu Sans Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="554.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="allTaskList" onKeyReleased="#handleAllTaskListKeyPressedAction" onMouseClicked="#handleAllTaskListMouseClickedAction" prefHeight="220.0" prefWidth="200.0" />
+                                    <Label prefHeight="1.0" prefWidth="200.0" />
+                                    <Button mnemonicParsing="false" onAction="#handleRemoveAction" prefHeight="33.0" prefWidth="210.0" stylesheets="@StyleSheet.css" text="Remove" />
+                                    <Label prefHeight="19.0" prefWidth="224.0" />
+                                    <ListView fx:id="addedTaskDescriptionList" prefHeight="234.0" prefWidth="200.0" />
+                                    <Label fx:id="miniTimerLabel" prefHeight="19.0" prefWidth="205.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

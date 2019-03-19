@@ -1,0 +1,305 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 5, 2015, 2:41:31 AM
+    Author     : shamin
+*/
+/*
+.root{
+    -fx-background-image: url("images/body.jpg");
+    -fx-background-repeat: repeat;
+}
+
+.button{
+    -fx-cursor: hand;
+    -fx-font-family: "Ubuntu";
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #472861;
+}
+
+.button:hover{
+    -fx-background-color: linear-gradient(#2A5080,#51a2B1);
+    -fx-text-fill: #ffffff;
+}
+
+.hyperlink{
+    -fx-font-family: "Ubuntu";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #006400;
+}
+
+.hyperlink:hover{
+    -fx-background-color: linear-gradient(#2A5080,#51a2B1);
+    -fx-text-fill: #ffffff;
+}
+
+.list-view {
+    -fx-border-color: #472861;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+}
+
+.list-cell:filled {
+    -fx-display: list-item;
+    -fx-list-style: none;
+    -fx-border-color: #472861;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+}
+
+.list-cell:filled:hover {
+    -fx-cursor: hand;
+    -fx-border-color: #472861;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+    -fx-background-color: linear-gradient(#2A5080,#51a2B1);
+    -fx-text-fill: #ffffff;
+}
+
+.check-box{
+    -fx-font-family: "Ubuntu";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000033;
+}
+
+.check-box:hover{
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient(#2A5080,#51a2B1);
+    -fx-text-fill: #ffffff;
+}
+
+.label{
+    -fx-font-family: "Ubuntu";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000033;
+}
+
+.label:disabled{
+    -fx-font-family: "Ubuntu";
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #006400;
+}
+
+.tab{
+    -fx-font-weight: bold;
+}
+
+.tab:hover{
+    -fx-background-color: linear-gradient(#2A2080,#51a2B1);
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.image-view:disabled{
+    -fx-image: url("images/toon.jpg");
+}
+
+.date-picker{
+    -fx-cursor: hand;
+}
+*/
+
+/* 
+    Created on : Dec 6, 2015, 8:53:31 PM
+    Author     : Asaduzzaman Noor
+*/
+
+.root{
+    -fx-background-image: url("images/background.jpg");
+    -fx-background-position: center;
+    -fx-background-repeat: repeat;
+    -fx-background-size: auto;
+    //-fx-border-image-source: url("images/background.jpg"), url("images/background.jpg");
+    -fx-border-image-insets: 10, 30;
+    -fx-border-image-repeat: stretch, stretch;
+    -fx-border-image-width: 50, 10;
+    -fx-border-image-slice: 50, 20;
+}
+
+.image-view:disabled{
+    -fx-image: url("images/toon.jpg");
+}
+
+.button{
+    -fx-cursor: hand;
+    -fx-font-family: "Comic Sans MS";
+    -fx-background-color:  linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #0093ff;
+    -fx-color: -fx-hover-base;
+}
+
+.date-chooser {
+    -fx-background-color:linear-gradient(white,#DDDDDD);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left bottom;
+}
+
+.list-view{
+    -fx-font-family: "Comic Sans MS";
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-text-fill: white;
+}
+
+.list-cell:even { 
+    -fx-background-color: white;
+}
+
+.list-cell:filled {
+    -fx-display: list-item;
+    -fx-list-style: none;
+    -fx-border-color: #472861;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-border-color: #472861;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+}
+
+
+
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(from 0px .75em to .75em 0px, repeat, -fx-accent 0%, -fx-accent 49%, derive(-fx-accent, 30%) 50%, derive(-fx-accent, 30%) 99%);
+}
+
+.text-input {
+    -fx-text-fill: -fx-text-inner-color;
+    -fx-highlight-fill: derive(-fx-control-inner-background,-20%);
+    -fx-highlight-text-fill: -fx-text-inner-color;
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-text-box-border, -10%), -fx-text-box-border),
+        linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 3, 2;
+    -fx-cursor: text;
+    -fx-padding: 0.333333em 0.583em 0.333333em 0.583em; /* 4 7 4 7 */
+}
+.text-input:focused {
+    -fx-highlight-fill: -fx-accent;
+    -fx-highlight-text-fill: white;
+    -fx-background-color: 
+        -fx-focus-color,
+        -fx-control-inner-background,
+        -fx-faint-focus-color,
+        linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);
+    -fx-background-insets: -0.2, 1, -1.4, 3;
+    -fx-background-radius: 3, 2, 4, 0;
+    -fx-prompt-text-fill: transparent;
+}
+
+.label {
+    -fx-text-fill: #004980;
+    -fx-font-size: 11pt;
+    -fx-font-family: "Comic Sans MS";
+   // -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+
+.label-bright {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Comic Sans MS";
+    -fx-text-fill: #0093ff;
+    -fx-opacity: 1;
+}
+
+.label:disabled{
+    -fx-font-family:"Comic Sans MS";
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #006400;
+}
+
+.button-whatsToday{
+    -fx-cursor: hand;
+    -fx-font-family: "Ubuntu";
+    -fx-background-color:  linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.button-whatsToday:hover {
+    -fx-background-color: #0093ff;
+    -fx-color: -fx-hover-base;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width: 195px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+    -fx-cursor: hand;
+    -fx-font-family: "Comic Sans MS";
+    -fx-background-color: red;
+}
+.tab-pane .tab
+{
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-text-fill: white;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #0093ff;
+    -fx-color: -fx-hover-base;
+    -fx-text-fill: white;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+}
+
+.check-box{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000033;
+}
+
+.check-box:hover{
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient(#2A5080,#51a2B1);
+    -fx-text-fill: #ffffff;
+}
+
+.date-picker{
+    -fx-cursor: hand;
+}
