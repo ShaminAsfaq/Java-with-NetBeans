@@ -2,6 +2,8 @@
 
 "Image Tool" is a desktop application developed with Java SE to implement Otsu's thresholding algorightm.
 
+***********
+
 "Media Player Demo" is a desktop application developed with Java SE to watch movies and listen to song files. It supports .mp3 and .mp4 format.
 
 "MySQL ToDoList" is a desktop application developed with Java SE to help manage our day to day life and keep records of works To-Do.
